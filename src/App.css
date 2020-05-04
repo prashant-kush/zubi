@@ -133,6 +133,7 @@
   border-radius: 50%;
   box-shadow: -7px 9px 15px #00000029;
   overflow: hidden;
+  animation: bottom_right_image_container_circle 1s infinite;
 }
 .lauda2{
   width: 140%;
@@ -309,16 +310,24 @@ width: 130%;
   }
 }
 @keyframes pacman_big{
-0% {
-  left: 0px;
-  top:calc(30% + 35vw * 50/100);
-  width: 5px;
-  height:5px;
+  0% {
+    left: 0px;
+    top:calc(30% + 35vw * 50/100);
+    width: 5px;
+    height:5px;
+  }
+  100% {
+    top:30%;
+    left:calc((35vw * 50 / 200) * -1);
+    width: calc(35vw * 50/100);
+    height:calc(35vw * 50/100);
+  }
 }
-100% {
-  top:30%;
-  left:calc((35vw * 50 / 200) * -1);
-  width: calc(35vw * 50/100);
-  height:calc(35vw * 50/100);
-}
+@keyframes bottom_right_image_container_circle{
+  0%{
+    right: -35vh;
+  }
+  100% {
+    right: -2vw;
+  }
 }
